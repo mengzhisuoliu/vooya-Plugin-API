@@ -72,10 +72,17 @@ typedef int vooBOOL;
 // display pixel data type
 typedef struct
 {
+#ifdef __APPLE__
+	unsigned char r;
+	unsigned char g;
+	unsigned char b;
+	unsigned char x;
+#else
 	unsigned char b;
 	unsigned char g;
 	unsigned char r;
 	unsigned char x;
+#endif
 } voo_target_space_t;
 
 
